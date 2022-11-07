@@ -40,14 +40,14 @@ public class Main {
             if (employees[i] != null) {
                 System.out.println(employees[i].toString());
             }
-
         }
     }
 
     public static void printArray(int department) {
+        Employee[] employees = filterByDepartment(department);
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
-                System.out.println(employees[i].toStringWithoutDpartment());
+                System.out.println(employees[i].toStringWithoutDepartment());
             }
         }
     }
@@ -100,7 +100,6 @@ public class Main {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
                 System.out.println(employees[i].getFullname());
-
             }
         }
     }
@@ -119,7 +118,6 @@ public class Main {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getDepartment() == department) {
                 employees[i].setSalary(employees[i].getSalary() * coeff);
-
             }
         }
     }
@@ -145,8 +143,7 @@ public class Main {
     public static void printEmployeesWithSalaryLessThan(double salary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() < salary) {
-                System.out.println(employees[i].toStringWithoutDpartment());
-
+                System.out.println(employees[i].toStringWithoutDepartment());
             }
         }
     }
@@ -154,8 +151,7 @@ public class Main {
     public static void printEmployeesWithSalaryMoreThan(double salary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() >= salary) {
-                System.out.println(employees[i].toStringWithoutDpartment());
-
+                System.out.println(employees[i].toStringWithoutDepartment());
             }
         }
     }

@@ -42,11 +42,11 @@ public class Employee {
 
     @Override
     public String toString() {
-   return String.format("%d. %s; Номер отдела: %d; Зарплата: %.2f", id, fullname,department,salary);
+        return String.format("%d. %s; Номер отдела: %d; Зарплата: %.2f", id, fullname, department, salary);
     }
-    public String toStringWithoutDpartment(){
-        return String.format("%d. %s; Зарплата: %.2f",id, fullname,salary);
 
+    public String toStringWithoutDepartment() {
+        return String.format("%d. %s; Зарплата: %.2f", id, fullname, salary);
     }
 }
 
